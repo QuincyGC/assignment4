@@ -47,7 +47,7 @@ namespace csi281 {
         {
             notSwapped = true;//make sure it gets reset to true
 
-            for (int j = 0; j < (length - i); j++)
+            for (int j = 0; j < (length - i - 1 ); j++)
             {
                 //if first is larger than next
                 if (array[j] > array[j + 1])
