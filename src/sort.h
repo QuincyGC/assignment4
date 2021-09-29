@@ -33,28 +33,97 @@
 using namespace std;
 
 namespace csi281 {
-    
+
     // Performs an in-place ascending sort of *array* of size *length*
     // using the bubble sort algorithm
     template <typename T>
     void bubbleSort(T array[], const int length) {
         // YOUR CODE HERE
+        //https://www.geeksforgeeks.org/comparison-among-bubble-sort-selection-sort-and-insertion-sort/
+
+        bool notSwapped = true;
+
+        for (int i = 0; i < (length - 1); i++)
+        {
+            notSwapped = true;//make sure it gets reset to true
+
+            for (int j = 0; j < (length - i))
+            {
+                //if first is larger than next
+                if (array[j] > array[j + 1])
+                {
+                    swap(array[j], array[j + 1])//first is now next and vise versa
+                        notSwapped = false;
+                }
+            }
+            //if the array did not swap
+            if (notSwapped)
+            {
+                break;
+            }
+        }
     }
-    
+
     // Performs an in-place ascending sort of *array* of size *length*
     // using the selection sort algorithm
     template <typename T>
     void selectionSort(T array[], const int length) {
         // YOUR CODE HERE
+        //https://www.geeksforgeeks.org/comparison-among-bubble-sort-selection-sort-and-insertion-sort/
+
+        int min = 0;
+
+        for (int i = 0; i < (length - 1); i++)
+        {
+            min = i;
+
+            //j starts one after i
+            for (int j = (I + 1); j < length; j++)
+            {
+                if (array[j] < array[min])
+                {
+                    min = j;//min is now the now the selected array position with the current smallest value
+                }
+            }
+
+            //if the min location is not what it was before
+            if (min != i)
+            {
+                //make min knew smallest element
+                swap(array[i], array[min]);
+            }
+        }
     }
-    
+
     // Performs an in-place ascending sort of *array* of size *length*
     // using the insertion sort algorithm
     template <typename T>
     void insertionSort(T array[], const int length) {
         // YOUR CODE HERE
+        //https://www.geeksforgeeks.org/comparison-among-bubble-sort-selection-sort-and-insertion-sort/
+
+        int insert = 0;
+        T item;//any type of item
+
+        for (int i = 1; i < length; i++)
+        {
+            insert = i;
+            item = array[i];
+            int j = i - 1;
+
+            while (J ? 0 && item < array[j])
+            {
+                array[j + 1] = array[j];
+                j--;
+            }
+
+            insert = j + 1;
+            array[insert] = item;
+        }
     }
 }
 
 
 #endif /* sort_hpp */
+
+
