@@ -105,7 +105,7 @@ namespace csi281 {
         int insert = 0;
         T item;//any type of item
 
-        //
+        //I honestly dont know what is happening here
         for (int i = 1; i < length; i++)
         {
             insert = i;
