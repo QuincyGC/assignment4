@@ -47,13 +47,13 @@ namespace csi281 {
         {
             notSwapped = true;//make sure it gets reset to true
 
-            for (int j = 0; j < (length - i))
+            for (int j = 0; j < (length - i); j++)
             {
                 //if first is larger than next
                 if (array[j] > array[j + 1])
                 {
-                    swap(array[j], array[j + 1])//first is now next and vise versa
-                        notSwapped = false;
+                    swap(array[j], array[j + 1]);//first is now next and vise versa
+                    notSwapped = false;
                 }
             }
             //if the array did not swap
@@ -78,7 +78,7 @@ namespace csi281 {
             min = i;
 
             //j starts one after i
-            for (int j = (I + 1); j < length; j++)
+            for (int j = (i + 1); j < length; j++)
             {
                 if (array[j] < array[min])
                 {
@@ -105,13 +105,14 @@ namespace csi281 {
         int insert = 0;
         T item;//any type of item
 
+        //
         for (int i = 1; i < length; i++)
         {
             insert = i;
             item = array[i];
             int j = i - 1;
 
-            while (J ? 0 && item < array[j])
+            while (j >= 0 && item < array[j])
             {
                 array[j + 1] = array[j];
                 j--;
