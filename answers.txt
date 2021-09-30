@@ -1,4 +1,4 @@
 1. It swaps each element in the a loop and keeps doing that till the end. Unlike selection sort and isertion sort.
 2. insertion sort is faster than selection sort because insertion sort knows that all elements less than the element being checked is sorted and always checks the next element compared to the ones before it. Unlike selection sort which takes the first minimum and runs through all elements and then swaps with the new min. So pretty much insertion sort is more selective comparing to previously sorted elements while selection sort runs through all elements.
-3. 
+3. I dont understand the question.
 4. I believe std:sort() is just more optimized because it uses a sorting algorithm but also other functions to reduce the number operations performed while sorting. https://www.geeksforgeeks.org/c-qsort-vs-c-sort/#:~:text=C%2B%2B%20sort()%20is%20blazingly,be%20comparing%20the%20integers%20directly.
